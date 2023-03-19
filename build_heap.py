@@ -44,7 +44,7 @@ def main():
 
     elif tips[0] == "F":
       file = input()
-      f = open("./test/" + file + "r")
+      f = open("./test/" + file, "r")
       n = int(f.readline())
       data = list(map(int, f.readline().split()))
       assert len(data) == n
