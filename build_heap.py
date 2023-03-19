@@ -44,10 +44,10 @@ def main():
 
     elif tips[0] == "F":
       file = input()
-      f = open("./test/" + file,'r')
-      n = int(f.readline())
-      data = list(map(int, f.readline().split()))
-      assert len(data) == n
+      with open(file,"r") as f:
+        n = int(f.readline())
+        data = list(map(int, f.readline().split()))
+        assert len(data) == n
     # calls function to assess the data 
     # and give back all swaps
     swaps = build_heap(data)
